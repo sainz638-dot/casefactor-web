@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "/login", "statusCode": 302 }
+  ],
+  "rewrites": [
+    { "source": "/dashboard", "destination": "/dashboard-artistas.html" },
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/admin-panel", "destination": "/admin-panel.html" }
+  ]
+}
